@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="public/fonts//Gilroy/stylesheet.css">
+</head>
+<body>
+    <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <button class="nav-reg-btn" id="reg-button">Регистрация</button>
+                    <button class="nav-log-btn" id="log-button">Авторизация</button>
+                </div>
+            </header>
+            <section class="main-content">
+                <div class="container">
+                    <h1>Начните общение в моем чате онлайн!</h1>
+                    <div class="name"></div>
+                    <button class="start-chat">Начни чат</button>
+                </div>
+            </section>
+    </div>
+
+    <!-- Окно регистрации -->
+    <div id="modal-reg" class="modal">
+        <div class="modalContent">
+          <div class="modalTitle">Регистрация</div>
+          <div class="container">
+              
+            <div class="username">
+              <input id="name" type="text" placeholder="Enter Name" required>
+            </div>
+            <div class="username">
+              <input id="reg-login" type="text" placeholder="Enter Username" required>
+            </div>
+    
+            <div class="password">
+              <input id="reg-password" type="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="verify"></div>
+    
+            <div class="user-reg">
+              <input id="reg-submit" class="reg-log-button" type="submit" value="Регистрация">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Окно авторизации -->
+    <div id="modal-log" class="modal">
+      <div class="verify"></div>
+        <div class="modalContent">
+          <div class="modalTitle">Авторизация</div>
+          <div class="container">
+
+            <div class="username">
+              <input id="login" type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+    
+            <div class="password">
+              <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+    
+            <div class="user-log">
+              <input id="user-login-btn" class="reg-log-button" type="submit" value="Вход">
+            </div>
+    
+          </div>
+        </div>
+    </div>
+      
+    <!-- CHAT -->
+
+    <div class="chat_main">
+      <div class="container">
+          <div class="name" id="name_header"></div>
+          <div class="chat"></div>
+          <div class="chat-elements">
+              <input id="chat-input" type="text" placeholder="Введите сообщение">
+              <button class="send-message" id="send-message">
+                  <span class="material-icons" id="send-btn">
+                      send
+                  </span>
+              </button>
+          </div>
+          <div class="menu">
+              <button id="menuButton">Выйти</a>
+          </div>
+      </div>
+    </div>
+
+    <script src="public/js/Server.js"></script>
+    <script src="public/js/particles.js"></script>
+    <script src="public/js/chat.js"></script>
+    <script src="public/js/main.js"></script>
+    <!-- <script src="public/js/room.js"></script> -->
+</body>
+</html>
